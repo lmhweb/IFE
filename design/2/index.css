@@ -1,0 +1,40 @@
+div.box1{
+    margin-left: 50px;
+    /*倾斜30度*/
+    transform: skewX(30deg);
+    -ms-transform: skewX(30deg);
+    -webkit-transform:skewX(30deg);
+    -o-transform:skewX(30deg);
+}
+div.box2{
+    margin-left: 29px;
+    /*X轴缩放2倍*/
+    transform: scaleX(0.5);
+    -ms-transform: scaleX(0.5);
+    -webkit-transform:scaleX(0.5);
+    -o-transform:scaleX(0.5);
+}
+div.box3{
+    margin-left: 27px;
+    /*顺时针旋转45度*/
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform:rotate(45deg);
+    -o-transform:rotate(45deg);
+}
+div.box4{
+    margin-left: 56px;
+    /*X轴向右平移10px Y轴向下平移20px*/
+    transform: translate(10px,20px);
+    -ms-transform:translate(10px,20px);
+    -webkit-transform:translate(10px,20px);
+    -o-transform:translate(10px,20px);
+}
+div.box5{
+    margin-left: 56px;
+    /*X轴向右平移10px Y轴向下平移50px  Y轴倾斜40度 */
+    transform: translate(10px,50px) skewY(45deg);
+    -ms-transform:translate(10px,50px) skewY(45deg);
+    -webkit-transform:translate(10px,50px) skewY(45deg);
+    -o-transform:translate(10px,50px) skewY(45deg);
+}
