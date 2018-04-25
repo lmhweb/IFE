@@ -1,0 +1,50 @@
+*{
+    margin:0;
+    padding:0;
+}
+.container{
+    width: 300px;
+    height:450px;
+    margin:  50px auto;
+    position: relative;
+    background: #eee;
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    perspective: 800px;
+}
+.container img.img{
+    position: absolute;
+    top: 50px;
+    left:25px;
+    width: 250px;
+    height:350px;
+    -webkit-transition:all 1s;
+    -moz-transition:all 1s;
+    transition:all 1s;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    /*转到背面不显示*/
+}
+.container  img.front{
+    z-index:2;
+    -webkit-transform:rotateY(0);
+    -moz-transform:rotateY(0);
+    transform:rotateY(0);
+}
+.container  img.back{
+    z-index:1;
+    -webkit-transform:rotateY(-180deg);
+    -moz-transform:rotateY(-180deg);
+    transform:rotateY(-180deg);
+}
+.container:hover .front{
+    -webkit-transform:rotateY(180deg);
+    -moz-transform:rotateY(180deg);
+    transform:rotateY(180deg);
+}
+.container:hover .back{
+    -webkit-transform:rotateY(0);
+    -moz-transform:rotateY(0);
+    transform:rotateY(0);
+}
