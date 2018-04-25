@@ -12,10 +12,12 @@
     -moz-perspective: 800px;
     perspective: 800px;
 }
-.container img.img{
+.container:after,
+.container:before{
     position: absolute;
     top: 50px;
     left:25px;
+    content: "";
     width: 250px;
     height:350px;
     -webkit-transition:all 1s;
@@ -26,24 +28,26 @@
     backface-visibility: hidden;
     /*转到背面不显示*/
 }
-.container  img.front{
+.container:after{
+    background:url("./images/front.jpg");
     z-index:2;
     -webkit-transform:rotateY(0);
     -moz-transform:rotateY(0);
     transform:rotateY(0);
 }
-.container  img.back{
+.container:before{
+    background:url("./images/back.jpg");
     z-index:1;
     -webkit-transform:rotateY(-180deg);
     -moz-transform:rotateY(-180deg);
     transform:rotateY(-180deg);
 }
-.container:hover .front{
+.container:hover::after{
     -webkit-transform:rotateY(180deg);
     -moz-transform:rotateY(180deg);
     transform:rotateY(180deg);
 }
-.container:hover .back{
+.container:hover::before{
     -webkit-transform:rotateY(0);
     -moz-transform:rotateY(0);
     transform:rotateY(0);
