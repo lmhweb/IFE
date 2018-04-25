@@ -27,7 +27,7 @@ build/Release
 
 # Dependency directory
 # https://docs.npmjs.com/misc/faq#should-i-check-my-node-modules-folder-into-git
-mvvm
+#mvvm
 mvvm/.vscode/
 mvvm/.cache/
 #idea
@@ -35,7 +35,7 @@ mvvm/.cache/
 mvvm/.vscode/
 mvvm/dist/
 
-
+mvvm/node_modules/
 mvvm/.babelrc
 mvvm/.postcssrc
 mvvm/package.json
