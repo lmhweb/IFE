@@ -36,7 +36,7 @@ mvvm/.vscode/
 mvvm/dist/
 
 mvvm/node_modules/
-mvvm/.babelrc
-mvvm/.postcssrc
-mvvm/package.json
-mvvm/src/
+#mvvm/.babelrc
+#mvvm/.postcssrc
+#mvvm/package.json
+#mvvm/src/
