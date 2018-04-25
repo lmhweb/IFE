@@ -33,7 +33,7 @@ mvvm/.cache/
 #idea
 .idea
 mvvm/.vscode/
-mvvm/dist/
+#mvvm/dist/
 
 mvvm/node_modules/
 #mvvm/.babelrc
