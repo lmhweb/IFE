@@ -1,0 +1,76 @@
+body{
+    background: #000;
+}
+ul {  /*调整ul标签的样式，取消内边距、外边距，和“点”样式*/
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+.stage {  /*设置舞台元素在屏幕居中，设置合适的景深大小*/
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 100px auto;
+    perspective: 400px;
+
+}
+@keyframes move { /*设置动画关键帧*/
+    0% {
+        transform: rotateY(0deg);
+    }
+    25% {
+        transform: rotateY(-90deg);
+    }
+    50% {
+        transform: rotateY(-180deg);
+    }
+    75% {
+        transform: rotateY(-270deg);
+    }       
+    100% {
+        transform: rotateY(-360deg);
+    }
+}
+.stage>ul.square {  /*动画容器居中在舞台元素中间*/
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -100px 0 0 -100px;
+    transform-style: preserve-3d; /*设置3D属性让子元素三维空间呈现*/
+    
+}
+.stage>ul.square:hover{
+    animation: move 9s linear infinite; 
+}
+
+.stage>ul.square>li { /*设置动画子元素公共属性*/
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 0;
+    top: 0;
+    background: rgb(32, 73, 112);
+    border: 2px solid rgb(52, 133, 209);
+    opacity: 0.5;
+}
+/*为了保证我们对立方体位置的控制，我们需要让动画容器在立方体的中间位置*/
+.stage>ul.square>li:nth-child(1) {
+    transform: translateZ(-100px);
+}
+.stage>ul.square>li:nth-child(2) {
+    transform: translateZ(100px);
+}
+.stage>ul.square>li:nth-child(3) {
+    transform: rotateX(90deg) translateZ(100px);
+}
+.stage>ul.square>li:nth-child(4) {
+    transform: rotateX(-90deg) translateZ(100px);
+}
+.stage>ul.square>li:nth-child(5) {
+    transform: rotateY(90deg) translateZ(100px);
+}
+.stage>ul.square>li:nth-child(6) {
+    transform: rotateY(-90deg) translateZ(100px);
+}
